@@ -1,0 +1,696 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #050505;
+    overflow-x: hidden;
+}
+
+.slot{
+    position: relative;
+    width: 1442px;
+    height: 1681px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 260px 160px 170px;
+    background-image: url("../images/bg.png");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.slot .slot_lamp{
+    position: absolute;
+}
+
+.slot .slot_lamp_1{
+    left: 25px;
+    top: 44px;
+}
+
+.slot .slot_lamp_2{
+    top: 44px;
+    right: 34px;
+}
+
+.slot .slot_lamp_3{
+    right: 25px;
+    bottom: 60px;
+}
+
+.slot .slot_lamp_4{
+    left: 26px;
+    bottom: 60px;
+}
+
+.slot .slot__topBlock{
+    margin-bottom: 80px;
+}
+
+/* title */
+.slot .slot__titleBlock{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.slot .slot__title{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* DISCOUNT */
+.slot .slot__discountBlock{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.slot .slot__discountItem{
+    width: 258px;
+    height: 267px;
+    position: relative;
+}
+
+.slot .slot__discountItem.active:before{
+    content: "";
+    display: block;
+    width: 565px;
+    height: 549px;
+    background-image: url("../images/l.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.slot .slot__discountRamka{
+    width: 258px;
+    height: 267px;
+     background-image: url("../images/ramka.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 3000;
+    padding: 25px 23px 29px;
+    border-radius: 17px;
+}
+
+.slot .slot__discountPrice{
+    opacity: 0.25;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 88px;
+    font-weight: 700;
+    position: relative;
+    z-index: 3000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.slot .slot__discountItem.active .slot__discountPrice{
+    opacity: 1;
+}
+
+.slot .slot__discounIcn{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 3000;
+}
+
+
+/* Machine */
+.slot .slot__middleBlock{
+    width: 1114px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 68px;
+}
+
+.slot .slot__arrow{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.slot .arr_r{
+    left: -121px;
+}
+
+.slot .arr_l{
+    right: -121px;
+}
+
+.slot .slot__machine{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 619px;
+    background-position-x: center;
+    background-image: url("../images/sllot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px 62px;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+} 
+
+.slot .slot__machineInner{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.slot .slot_ul{
+    list-style: none;
+}
+
+/* button block */
+.slot .slot__bottomBlock{
+    padding: 0 30px;
+    position: relative;
+    z-index: 1000;
+}
+
+.slot .slot__buttonBlock{
+    text-align: center;
+}
+
+.slot .slot__button{
+    background-image: url("../images/btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 512px;
+    height: 112px;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-weight: 700;
+    border: none;
+    border-radius: 26px;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.slot .slot__button:hover{
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
+}
+
+.slot .slot__button:active{
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+/* popap */
+.slot .slot__popap{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 5000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+}
+
+.slot .slot__popapContent{
+    background-image: url("../images/popap.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1134px;
+    height: 695px;
+    text-align: center;
+    padding: 145px 0 0 0;
+    position: relative;
+}
+
+.slot .slot__popapClose{
+    position: absolute;
+    top: 125px;
+    right: 132px;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.slot .slot__popapClose:hover{
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
+}
+
+.slot__popapCloseImg{
+    width: 53px;
+    height: 54px;
+}
+
+.slot .slot__popapTextBlock{
+    margin-bottom: 10px;
+}
+
+.slot .slot__popapTextBlock--2{
+    margin-bottom: 32px;
+}
+
+.slot .slot__popapTextBlock--3{
+    margin-bottom: 0;
+}
+
+.slot .slot__popapText{
+    color: #f3d08b;
+    font-family: Montserrat;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.slot .slot__popapDiscoutBlock{
+    margin-bottom: 10px;
+}
+
+.slot .slot__popapDiscoutText{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 110px;
+}
+
+.slot .slot__popapCodeBlock{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.slot .slot__popapCode{
+    width: 518px;
+    height: 81px;
+    border-radius: 10px;
+    background-color: #151515;
+    margin-left: 19px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.slot .slot__popapCodeText{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1442px){
+    .slot {
+        width: 768px;
+        height: 888px;
+        padding: 103px 65px 77px;
+        background-size: cover;
+        background-image: url("../images/bg_middle.jpg");
+    }
+
+    .slot .slot_lamp_1{
+        left: 0;
+        top: 24px;
+        width: 317px;
+        height: 339px;
+    }
+    
+    .slot .slot_lamp_2{
+        right: 0;
+        top: 24px;
+        width: 321px;
+        height: 339px;
+    }
+    
+    .slot .slot_lamp_3{
+        right: 0;
+        bottom: 38px;
+        width: 275px;
+        height: 179px;
+    }
+    
+    .slot .slot_lamp_4{
+        left: 0;
+        bottom: 38px;
+        width: 275px;
+        height: 179px;
+    }    
+
+    .slot .slot__topBlock{
+        margin-bottom: 40px;
+    }
+
+    .slot .slot__titleBlock{
+        margin-bottom: 25px;
+    }
+
+    .slot .slot__title{
+        font-size: 29px;
+    }
+
+    .slot .slot__discountItem, .slot .slot__discountRamka {
+        width: 149px;
+        height: 154px;
+    }
+
+    .slot .slot__discountRamka{
+        border-radius: 8px;
+    }
+
+    .slot .slot__discountItem.active:before{
+        width: 340px;
+        height: 320px;
+    }
+
+    .slot .slot__discountRamka{
+        padding: 16px 14px 16px;
+    }
+
+    .slot .slot__discountPrice{
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    .slot .slot__middleBlock{
+        width: 642px;
+        margin-bottom: 32px;
+    }
+
+    .slot .slot__machine{
+        height: 356px;
+        padding: 30px 35px;
+    }
+
+    .slot .arr_r {
+        left: -95px;
+    }
+
+    .slot .arr_l {
+        right: -95px;
+    }
+
+    .slot .slot__machineInner img{
+        width: 164px;
+        height: 165px;
+    }
+
+    .slot .slot__button{
+        width: 295px;
+        height: 65px;
+        font-size: 24px;
+        border-radius: 15px;
+    }
+}
+
+/* popap */
+@media screen and (max-width: 1170px){
+  
+    .slot .slot__popapContent{
+        width: 737px;
+        height: 450px;
+        padding-top: 92px;
+    }
+
+    .slot .slot__popapText{
+        font-size: 21px;
+    }
+
+    .slot .slot__popapDiscoutText{
+        font-size: 88px;
+        line-height: 100px;
+    }
+
+    .slot .slot__popapCode{
+        width: 216px;
+        height: 48px;
+        margin-left: 14px;
+    }
+
+    .slot .slot__popapCodeText{
+        font-size: 23px;
+    }
+
+    .slot__popapTextBlock, .slot__popapDiscoutBlock{
+        margin-bottom: 0 !important;
+    }
+    
+    .slot .slot__popapTextBlock--2{
+        margin-bottom: 19px !important;
+    }
+
+    .slot .slot__popapClose{
+        top: 85px;
+        right: 90px;
+    }
+
+    .slot__popapCloseImg{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .slot {
+        background-image: url("../images/bg_mob.jpg");
+        width: 375px;
+        height: 709px;
+        padding: 80px 0 77px;
+    }
+
+    .slot .slot_lamp_1{
+        left: 0;
+        top: 17px;
+        width: 155px;
+        height: 167px;
+    }
+    
+    .slot .slot_lamp_2{
+        right: 0;
+        top: 17px;
+        width: 156px;
+        height: 166px;
+    }
+    
+    .slot .slot_lamp_3{
+        right: -10px;
+        bottom: 62px;
+        width: 134px;
+        height: 88px;
+    }
+    
+    .slot .slot_lamp_4{
+        left: -10px;
+        bottom: 62px;
+        width: 135px;
+        height: 88px;
+    }    
+
+    .slot .slot__topBlock{
+        margin-bottom: 40px;
+        padding: 0 11px;
+    }
+
+    .slot .slot__titleBlock{
+        margin-bottom: 40px;
+    }
+
+    .slot .slot__title{
+        font-size: 24px;
+    }
+
+    .slot .slot__discountItem, .slot .slot__discountRamka {
+        width: 82px;
+        height: 85px;
+    }
+
+    .slot .slot__discountRamka{
+        border-radius: 3px;
+    }
+
+    .slot .slot__discountItem.active:before{
+        width: 180px;
+        height: 160px;
+    }
+
+    .slot .slot__discountRamka{
+        padding: 7px 7px 9px;
+    }
+
+    .slot .slot__discountPrice{
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .slot .slot__middleBlock{
+        width: 375px;
+        margin-bottom: 45px;
+    }
+
+    .slot .slot__machine{
+        background-image: url("../images/sllot_mob.png");
+        height: 229px;
+        padding: 18px 4px;
+    }
+
+    .slot .arr_l, .slot .arr_r {
+        display: none;
+    }
+
+    .slot .slot__machineInner img{
+        width: 105px;
+        height: 107px;
+    }
+
+    .slot .slot__button{
+        width: 243px;
+        height: 54px;
+        font-size: 20px;
+        border-radius: 12px;
+    }
+}
+
+/* popap */
+@media screen and (max-width: 730px){
+
+    .slot .slot__popapContent{
+        width: 370px;
+        height: 246px;
+        padding: 37px 35px 0;
+    }
+
+    .slot .slot__popapText{
+        font-size: 17px;
+    }
+
+    .slot .slot__popapText br:first-child{
+        display: none;
+    }
+
+    .slot .slot__popapText .hide_mob{
+        display: none;
+    }
+
+    .slot .slot__popapDiscoutText{
+        font-size: 17px;
+        line-height: 17px;
+    }
+
+    .slot .slot__popapCodeBlock{
+       -webkit-box-pack: justify;
+           -ms-flex-pack: justify;
+               justify-content: space-between;
+    }
+
+    .slot .slot__popapClose{
+        top: 40px;
+        right: 25px;
+    }
+
+    .slot .slot__popapCloseImg{
+        width: 17px;
+        height: 17px;
+    }
+
+    .slot .slot__popapTextBlock, .slot .slot__popapDiscoutBlock{
+        margin-bottom: 12px !important;
+    }
+
+    .slot .slot__popapTextBlock--3{
+        margin-bottom: 10px !important;
+    }
+
+    .slot .slot__popapCode{
+        width: 159px;
+        height: 30px;
+        margin-left: 0;
+    }
+
+    .slot .slot__popapCodeText{
+        font-size: 15px;
+    }
+} 
